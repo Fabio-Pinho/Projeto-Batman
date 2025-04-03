@@ -7,27 +7,17 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header >
-        <img id="logo" src="./logo-batman.jpg">
-        <nav>
-        <ul>
-            <a href="./index.html">
-                <li>Home</li>
-            </a>
-
-            <a href="./contato.html">
-                <li>Contato</li>
-            </a>
-
-            <a href="./fotos.html">
-                <li>Fotos</li>
-            </a>
-
-            <a href="./Comentarios.html">
-                <li>Comentários</li>
-            </a>
-        </ul>
-    </nav>
+    <header>
+        <img id="logo" src="./logo-batman.jpg" alt="Logo Batman">
+        <button class="menu-button" onclick="toggleMenu()">☰</button>
+        <nav id="nav-menu">
+            <ul>
+                <a href="./index.html"><li>Home</li></a>
+                <a href="./contato.html"><li>Contato</li></a>
+                <a href="./fotos.html"><li>Fotos</li></a>
+                <a href="./comentarios.html"><li>Comentários</li></a>
+            </ul>
+        </nav>
     </header>
 
     <div id="banner"></div>
@@ -53,10 +43,7 @@
         </div>
     </div>
     <footer>
-        <img style="object-fit: contain;" id="logo" src="./logo-batman.jpg">  
-        <span>Todos os direitos reservados ©</span>
-        <span>Desenvolvido por: Fábio Costa.</span>
-
+       
         <nav class="footer-navigation">
             <ul class="footer-list">
                 <a href="./index.html">
@@ -76,7 +63,21 @@
                 </a>
             </ul>
         </nav>
+            <br>
+            <br>
+        <span>Todos os direitos reservados ©</span>
+        <span>Desenvolvido por: Fábio Costa.</span>
+        <br>
+        <img style="object-fit: contain;" id="logo" src="./logo-batman.jpg">  
+    
     </footer>
+
+    <script>
+        function toggleMenu() {
+    const navMenu = document.getElementById('nav-menu');
+    navMenu.classList.toggle('active');
+}
+    </script>
 </body>
 </html>
 
