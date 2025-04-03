@@ -52,6 +52,22 @@ li:hover {
     height: auto;
 }
 
+.menu-button {
+    display: none;
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+  /* Reset de estilos */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Kdam Thmor Pro", serif;
+}
 
 body {
     font-family: "Kdam Thmor Pro", serif;
@@ -92,7 +108,7 @@ input, textarea {
 
 button {
     font-family: "Kdam Thmor Pro", serif;
-    width: 100%;
+    
     background: #d21617;
     color: aliceblue;
     border: none;
@@ -146,12 +162,40 @@ span {
     font-family: "Kdam Thmor Pro", serif;
 }
 
-.footer-navigation {
-    display: none;
-}
 
 .footer-list {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+@media (max-width: 768px) {
+    .menu-button {
+        display: block;
+    }
+
+    nav {
+        display: none;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background-color: black;
+        text-align: center;
+    }
+
+    nav.active {
+        display: flex;
+        flex-direction: column;
+    }
+
+    ul {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px 0;
+    }
+
+    li {
+        padding: 10px;
+    }
 }
