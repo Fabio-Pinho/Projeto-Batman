@@ -1,41 +1,46 @@
 @import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     background-color: black;
     list-style: none;
     text-decoration: none;
+    box-sizing: border-box;
 }
 
 header {
     width: 100%;
     height: 90px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     padding: 0 20px;
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
 }
 
 nav {
-    width:60%;
+    flex: 1;
+    display: flex;
+    justify-content: center;
 }
 
 ul {
     display: flex;
-    width: 100%;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 30px;
+    padding: 0;
 }
 
 li {
-    list-style: none;
     color: aliceblue;
     cursor: pointer;
     font-size: 19px;
     transition: .5s;
     font-family: "Kdam Thmor Pro", serif;
-
 }
 
 li:hover {
@@ -43,10 +48,8 @@ li:hover {
 }
 
 #logo {
-    width: 150px;
+    width: 120px;
     height: auto;
-    position: auto; 
-
 }
 
 
