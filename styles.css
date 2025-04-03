@@ -1,41 +1,42 @@
 @import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     background-color: black;
     list-style: none;
     text-decoration: none;
+    box-sizing: border-box;
 }
 
 header {
     width: 100%;
     height: 90px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     padding: 0 20px;
     position: relative;
 }
 
 nav {
-    width:60%;
+    flex: 1;
+    display: flex;
+    justify-content: center;
 }
 
 ul {
     display: flex;
-    width: 100%;
-    justify-content: space-between;
+    justify-content: center; 
+    padding: 0;
 }
 
 li {
-    list-style: none;
     color: aliceblue;
     cursor: pointer;
     font-size: 19px;
     transition: .5s;
     font-family: "Kdam Thmor Pro", serif;
-
 }
 
 li:hover {
@@ -43,51 +44,70 @@ li:hover {
 }
 
 #logo {
-    width: 150px;
+    width: 120px;
     height: auto;
-    position: auto; 
+}
 
+.menu-button {
+    display: none;
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
 }
 
 #banner {
     background-image: url(https://preview.redd.it/6092ltrt8nt71.jpg?auto=webp&s=c26d698d5d92796be9c6ab47f22dba63a7be96c3);
-    background-position: 50% 50%;
+    background-position: center;
     background-size: cover;
     width: 100%;
     height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #trailer-container {
     width: 100%;
-    height: 400px;
+    height: auto;
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
 }
 
 .content {
-    width: 60%;
+    width: 80%;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    text-align: center;
 }
 
 .trailer {
-width: 50%;
+    width: 100%;
+    max-width: 600px;
 }
 
 #sinopse {
-    width: 50%;
+    width: 100%;
+    max-width: 500px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    margin-left: 30px;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0;
+    text-align: center;
 }
 
 .description {
     color: #fff;
     font-size: 19px;
     font-family: "Kdam Thmor Pro", serif;
-    width: 70%;
+    text-align: center;
 }
 
 .button {
@@ -95,15 +115,14 @@ width: 50%;
     height: 60px;
     background-color: #d21617;
     color: #fff;
-    padding: 8px 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: .8s;
-    font-size: 18px;
     display: flex;
     justify-content: center;
     align-items: center;
     font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .8s;
+    font-size: 18px;
     border: none;
     outline: none;
     margin-top: 25px;
@@ -157,33 +176,63 @@ width: 50%;
 .banner-2 { background-image: url(https://preview.redd.it/mhhrwrd6zss31.jpg?auto=webp&s=b69477be63e4c67e1c446c06126823f2caa21107);
 }
 
-    .banner-3 {
-        background-image: url(./gordon);
+.banner-3 {
+    background-image: url(./gordon);
+}
+
+footer {
+    height: auto;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+span {
+    color: #fff;
+    font-family: "Kdam Thmor Pro", serif;
+}
+
+.footer-navigation {
+    display: none;
+}
+
+.footer-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .menu-button {
+        display: block; /* Mostra o botão */
     }
 
-    footer {
-        height: 300px;
-        margin-top: 50px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-around;
-    }
-
-    span {
-        color: #fff;
-        font-family: "Kdam Thmor Pro", serif;
-    }
-
-    .footer-navigation {
+    nav {
         display: none;
-    }
-
-    .footer-list {
-        display: flex;
         flex-direction: column;
-        align-items: center;
+        width: 100%;
+        position: absolute;
+        top: 90px;
+        left: 0;
+        background-color: black;
+        text-align: center;
     }
 
-    
-    
+    nav.active {
+        display: flex; /* Exibe o menu ao clicar no botão */
+    }
+
+    ul {
+        flex-direction: column;
+        width: 100%;
+        padding: 10px;
+    }
+
+    li {
+        padding: 10px;
+    }
+}
